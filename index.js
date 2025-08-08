@@ -13,7 +13,9 @@ app.use(express.json());
 
 // Connect to MongoDB
 connectDB();
-
+app.use('/',(req,res)=>{
+  res.send("Todo-api is running")
+})
 app.use('/api/auth' ,authroutes);
 app.use('/api/todos', todoRoutes);
 app.listen(process.env.PORT,()=>{
