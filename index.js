@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Connect to MongoDB
 connectDB();
-app.use('/',(req,res)=>{
+app.use('/onlyfortest',(req,res)=>{
   res.send("Todo-api is running")
 })
 app.use('/api/auth' ,authroutes);
